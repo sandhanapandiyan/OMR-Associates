@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMR Associates</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Card container style */
+        .card-container {
+            margin-top: 30px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card-container h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .card-container h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-container p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .about-info {
+            margin-top: 10px;
+        }
+
+        /* Styling for Our Services Section */
+        .services-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            width: 250px;
+            margin: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #0066cc;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .enquiry-button {
+            background-color: #25d366;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        footer {
+           position: fixed;
+           bottom: 0;
+           right: 0;
+           background-color: #0066cc; /* Blue color */
+           color: white;
+           font-size: 14px;
+           padding: 10px 20px;
+           border-top-left-radius: 8px;
+           text-align: center;
+           box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.1);
+           width: auto;
+           z-index: 999;
+        }
+
+        .enquiry-button:hover {
+            background-color: #128c7e;
+        }
+    </style>
+</head>
+<body>
+    <!-- Profile Section -->
+    <section id="profile" class="section">
+        <div class="profile-container">
+            <img src="your-logo.png" alt="Company Logo" class="company-logo">
+            <h1 class="company-name">OMR Associates</h1>
+            <div class="social-icons">
+                <a href="https://wa.me/9791256519" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                <a href="tel:+919791256519" class="social-link"><i class="fas fa-phone-alt"></i></a>
+                <a href="mailto:info@omr-associates.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.google.com/maps?q=Your+Location" target="_blank" class="social-link"><i class="fas fa-map-marker-alt"></i></a>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-phone-alt"></i> +919791256519</p>
+                <p><i class="fas fa-envelope"></i> info@omr-associates.com</p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> 123, Main Street, Your City
+                    <button class="vcf-button" onclick="downloadVCard()">Download Contact</button>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us and Our Services Section -->
+    <section id="about-us" class="section">
+        <div class="card-container">
+            <!-- About Us -->
+            <h1>About Us</h1>
+            <div class="about-info">
+                <h2>Company Name: <span>OMR Associates</span></h2>
+                <p>Nature of Business: <span>Account & Tax Services</span></p>
+            </div>
+
+            <!-- Our Services -->
+            <h1>Our Services</h1>
+            <div class="services-info">
+                <!-- Service 1: GST Registration -->
+                <div class="service-card">
+                    <img src="gst.jpg" alt="GST Services">
+                    <h3>GST Registration & Filing</h3>
+                    <p>Complete GST registration and filing services for your business.</p>
+                    <button class="enquiry-button" onclick="openWhatsApp('GST Registration & Filing')">Enquiry</button>
+                </div>
+
+                <!-- Service 2: Income Tax -->
+                <div class="service-card">
+                    <img src="income-tax.jpg" alt="Income Tax">
+                    <h3>Income Tax Services</h3>
+                    <p>Comprehensive tax planning and filing of income tax returns.</p>
+                    <button class="enquiry-button" onclick="openWhatsApp('Income Tax Services')">Enquiry</button>
+                </div>
+
+                <!-- Service 3: MSME Registration -->
+                <div class="service-card">
+                    <img src="msme-registration.webp" alt="MSME Registration">
+                    <h3>MSME Registration</h3>
+                    <p>Register your business as MSME for benefits and government schemes.</p>
+                    <button class="enquiry-button" onclick="openWhatsApp('MSME Registration')">Enquiry</button>
+                </div>
+
+                <!-- Service 4: ESI & PF Services -->
+                <div class="service-card">
+                    <img src="esi-pf.png" alt="ESI & PF Services">
+                    <h3>ESI & PF Services</h3>
+                    <p>Compliance and filing services for ESI & PF registrations.</p>
+                    <button class="enquiry-button" onclick="openWhatsApp('ESI & PF Services')">Enquiry</button>
+                </div>
+
+                <!-- Service 5: PAN & TAN Apply -->
+                <div class="service-card">
+                    <img src="pan-tan.png" alt="PAN & TAN">
+                    <h3>PAN & TAN Apply</h3>
+                    <p>Assistance in applying for PAN & TAN for your business.</p>
+                    <button class="enquiry-button" onclick="openWhatsApp('PAN & TAN Apply')">Enquiry</button>
+                </div>
+
+                <!-- Service 6: IE Code Registration -->
+                <div class="service-card">
+                    <img src="ie-code.jpg" alt="IE Code Registration">
+                    <h3>IE Code Registration</h3>
+                    <p>Register for an Import Export (IE) Code for your business.</p>
+                    <button class="enquiry-button" onclick="openWhatsApp('IE Code Registration')">Enquiry</button>
+                </div>
+
+                <!-- Service 7: Trademark Registration -->
+                <div class="service-card">
+                    <img src="trademark.jpg" alt="Trademark Registration">
+                    <h3>Trademark Registration</h3>
+                    <p>Get your trademark registered for protecting your brand identity.</p>
+                    <button class="enquiry-button" onclick="openWhatsApp('Trademark Registration')">Enquiry</button>
+                </div>
+
+                <!-- Service 8: FSSAI Registration & Renewal -->
+                <div class="service-card">
+                    <img src="fssai.jpg" alt="FSSAI Registration & Renewal">
+                    <h3>FSSAI Registration & Renewal</h3>
+                    <p>Get FSSAI certification for your food-related business.</p>
+                    <button class="enquiry-button" onclick="openWhatsApp('FSSAI Registration & Renewal')">Enquiry</button>
+                </div>
+
+                <!-- Service 9: Chit Fund Registration -->
+                <div class="service-card">
+                    <img src="chit-fund.jpg" alt="Chit Fund Registration">
+                    <h3>Chit Fund Registration</h3>
+                    <p>Register your chit fund business with compliance.</p>
+                    <button class="enquiry-button" onclick="openWhatsApp('Chit Fund Registration')">Enquiry</button>
+                </div>
+
+                <!-- Service 10: Firm Registration -->
+                <div class="service-card">
+                    <img src="firm-registration.jpg" alt="Firm Registration">
+                    <h3>Firm Registration</h3>
+                    <p>Register your business as a legal entity.</p>
+                    <button class="enquiry-button" onclick="openWhatsApp('Firm Registration')">Enquiry</button>
+                </div>
+
+                <!-- Service 11: Auditing -->
+                <div class="service-card">
+                    <img src="auditing.jpg" alt="Auditing">
+                    <h3>Auditing Services</h3>
+                    <p>Professional auditing services for businesses.</p>
+                    <button class="enquiry-button" onclick="openWhatsApp('Auditing Services')">Enquiry</button>
+                </div>
+
+                <!-- Service 12: LIC & Insurance -->
+                <div class="service-card">
+                    <img src="lic-insurance.jpg" alt="LIC & Insurance">
+                    <h3>Insurance Services</h3>
+                    <p>Get the right life insurance and LIC services.</p>
+                    <button class="enquiry-button" onclick="openWhatsApp('LIC & Insurance Services')">Enquiry</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+       
+        function openWhatsApp(service) {
+            const phoneNumber = '+919791256519'; // Replace with your WhatsApp number
+            const message = `Hello Sir, I visited your site and need more details about ${service}.`;
+            const encodedMessage = encodeURIComponent(message);
+            const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(url, '_blank');
+        }
+
+        function downloadVCard() {
+            const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:OMR Associates
+TEL:+91 9791256519
+EMAIL:info@omr-associates.com
+END:VCARD`;
+            const vCardBlob = new Blob([vCardData], { type: 'text/vcard' });
+            const vCardUrl = URL.createObjectURL(vCardBlob);
+            const a = document.createElement('a');
+            a.href = vCardUrl;
+            a.download = 'OMR_Associates.vcf';
+            a.click();
+        }
+    </script>
+    <footer>&COPY; 2024 Phantom Genitix Technologics || All Rights Reserved</footer>
+</body>
+</html>

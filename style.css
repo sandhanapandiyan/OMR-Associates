@@ -1,0 +1,112 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #84fab0, #8fd3f4); /* Unified Background Color */
+    color: #333;
+}
+
+/* Profile Section */
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-container {
+    text-align: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.company-logo {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.company-name {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-link {
+    font-size: 1.5rem;
+    color: #fff;
+    background: #ff5722;
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.8);
+}
+
+.contact-info {
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vcf-button {
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.vcf-button:hover {
+    background: #e64a19;
+    transform: scale(1.1);
+}
+
+/* About Us Section */
+#about-us {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+    font-size: 2rem;
+    color: #ff5722;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-container p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
